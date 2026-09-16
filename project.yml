@@ -1,0 +1,76 @@
+name: Matrix3DSaverX
+options:
+  bundleIdPrefix: de.r8lle.screensaver
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+
+# -----------------------------------------------------------------------------
+# Internal switch: Appex (host app + extension) on/off.
+# false = only classic .saver (Matrix3DSaverX). true = also App + Extension.
+# -----------------------------------------------------------------------------
+include:
+  - path: project-appex.yml
+    enable: false
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    CLANG_ENABLE_MODULES: YES
+    ENABLE_HARDENED_RUNTIME: YES
+    ARCHS: "$(ARCHS_STANDARD)"
+  configs:
+    Debug:
+      ONLY_ACTIVE_ARCH: YES
+      CODE_SIGN_STYLE: Automatic
+      DEVELOPMENT_TEAM: YOUR_TEAM_ID
+    Release:
+      ONLY_ACTIVE_ARCH: NO
+      CODE_SIGN_STYLE: Manual
+      DEVELOPMENT_TEAM: YOUR_TEAM_ID
+      CODE_SIGN_IDENTITY: "Developer ID Application"
+
+targets:
+  Matrix3DSaverX:
+    type: bundle
+    platform: macOS
+    productName: Matrix3DSaverX
+    sources:
+      - path: Sources
+      - path: Shaders
+      # default.metallib is compiled fresh from Shaders/Shaders.metal for
+      # this target (unlike the Appex target, which uses the prebuilt one
+      # below to dodge Metal-toolchain flakiness in CI/sandboxes) --
+      # copying the prebuilt file here too raced with the compiled one for
+      # the same output path ("Multiple commands produce ... default.metallib").
+      - path: Resources
+        buildPhase: resources
+        excludes:
+          - default.metallib
+          - thumbnail-source.png
+    settings:
+      base:
+        WRAPPER_EXTENSION: saver
+        PRODUCT_BUNDLE_IDENTIFIER: de.r8lle.screensaver.matrix3dx
+        INFOPLIST_FILE: Sources/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        SKIP_INSTALL: NO
+        COMBINE_HIDPI_IMAGES: NO
+        MACOSX_DEPLOYMENT_TARGET: "13.0"
+        CURRENT_PROJECT_VERSION: 30
+        MARKETING_VERSION: "1.0"
+        FRAMEWORK_SEARCH_PATHS: "$(inherited)"
+    dependencies:
+      - sdk: ScreenSaver.framework
+      - sdk: Metal.framework
+      - sdk: MetalKit.framework
+      - sdk: ModelIO.framework
+      - sdk: Cocoa.framework
+
+schemes:
+  Matrix3DSaverX:
+    build:
+      targets:
+        Matrix3DSaverX: all
+    run:
+      config: Debug

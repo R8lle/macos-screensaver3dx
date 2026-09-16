@@ -1,0 +1,75 @@
+# Appex host app + screensaver extension (macOS 14+).
+# Included from project.yml only when ENABLE_APPEX is true.
+
+targets:
+  Matrix3DSaverXApp:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    productName: Matrix3DSaverX
+    sources:
+      - path: App
+      - path: Resources/AppIcon.icns
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: de.r8lle.screensaver.matrix3dx.app
+        PRODUCT_NAME: Matrix3DSaverX
+        INFOPLIST_FILE: App/Info.plist
+        CODE_SIGN_ENTITLEMENTS: App/Matrix3DSaverXApp.entitlements
+        GENERATE_INFOPLIST_FILE: NO
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        CURRENT_PROJECT_VERSION: 30
+        MARKETING_VERSION: "1.0"
+        COMBINE_HIDPI_IMAGES: YES
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+    dependencies:
+      - target: Matrix3DSaverXExtension
+        embed: true
+        codeSign: true
+
+  Matrix3DSaverXExtension:
+    type: app-extension
+    platform: macOS
+    deploymentTarget: "14.0"
+    productName: Matrix3DSaverXExtension
+    sources:
+      - path: Extension
+      - path: Sources
+        excludes:
+          - Info.plist
+      - path: Resources
+        buildPhase: resources
+        excludes:
+          - AppIcon.icns
+      - path: Resources/AppIcon.icns
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: de.r8lle.screensaver.matrix3dx.app.Extension
+        INFOPLIST_FILE: Extension/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Extension/Matrix3DSaverXExtension.entitlements
+        SWIFT_OBJC_BRIDGING_HEADER: Extension/Matrix3DSaverXExtension-Bridging-Header.h
+        GENERATE_INFOPLIST_FILE: NO
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        CURRENT_PROJECT_VERSION: 30
+        MARKETING_VERSION: "1.0"
+        SKIP_INSTALL: YES
+        ENABLE_APP_SANDBOX: YES
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) APPEX"
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks"
+    dependencies:
+      - sdk: ScreenSaver.framework
+      - sdk: Metal.framework
+      - sdk: MetalKit.framework
+      - sdk: ModelIO.framework
+      - sdk: Cocoa.framework
+
+schemes:
+  Matrix3DSaverXApp:
+    build:
+      targets:
+        Matrix3DSaverXApp: all
+        Matrix3DSaverXExtension: all
+    run:
+      config: Debug

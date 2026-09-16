@@ -1,0 +1,21 @@
+# Apple ModelI/O MTL File: spaceship.mtl
+
+newmtl Material_003
+	map_Kd spaceship.usdz[0/Material.003_baseColor.jpg]
+	Kd 0.18 0.18 0.18
+	map_Ka spaceship.usdz[0/Material.003_emissive.jpg]
+	Ka 0 0 0
+	Ks 0
+	map_ao spaceship.usdz[0/Material.003_metallicRoughness_occl.jpg]
+	ao 0
+	subsurface 0
+	map_metallic spaceship.usdz[0/Material.003_metallicRoughness_metal.jpg]
+	specularTint 0
+	map_roughness spaceship.usdz[0/Material.003_metallicRoughness_rough.jpg]
+	anisotropicRotation 0
+	sheen 0.05
+	sheenTint 0
+	clearCoat 0
+	clearCoatGloss 0.99
+	map_tangentSpaceNormal spaceship.usdz[0/Material.003_normal_norm.jpg]
+

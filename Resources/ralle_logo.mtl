@@ -1,0 +1,8 @@
+# R@lle Logo
+newmtl ralle_outer
+Kd 0.04 0.14 0.52
+Ks 0
+newmtl ralle_chrome
+Kd 1 1 1
+Ks 1
+Ns 900

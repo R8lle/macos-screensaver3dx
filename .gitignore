@@ -1,0 +1,7 @@
+# Local / generated — not part of the public 1.0 (29) tree
+build/
+*.xcuserstate
+xcuserdata/
+DerivedData/
+.DS_Store
+tools/local-signing.env

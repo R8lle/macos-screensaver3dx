@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C3C6140FC3DDB6828F0A4B4 /* ralle_logo.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 97B93102B75E7788E56EEE89 /* ralle_logo.mtl */; };
+		1F06F5E2BEF3C861455572A7 /* TextMeshGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320D17FEA585F94336A55B56 /* TextMeshGenerator.swift */; };
+		20579ECEDB1382772C22EE54 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B85040E4315AD2096D8425 /* Renderer.swift */; };
+		26EB1E66AA87623050141E8F /* GlyphAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C035E76C222FD84175E12 /* GlyphAtlas.swift */; };
+		2AE7ED00B0101B0172D73CCD /* spaceship.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E6686EEBDBE021C2F7D537DD /* spaceship.mtl */; };
+		2E83E24DE9C91CA1320C0659 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = CA58467C7179EA1E01EBEE47 /* thumbnail.png */; };
+		2FBCEA487A2A29A9FD5CD1A3 /* spaceship.obj in Resources */ = {isa = PBXBuildFile; fileRef = 6F94171C23418EC7CD36664F /* spaceship.obj */; };
+		3613A4350D3ECA876810FC77 /* GlbMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A15DED78C28F4781E1124ED /* GlbMesh.swift */; };
+		36E9421667270891A4445283 /* ModelRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448CBEEF85F165CD726E0948 /* ModelRegistry.swift */; };
+		3D3093E73DF1589645C9F620 /* ScreenRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DE714284F4E86306FD4FC /* ScreenRegistry.swift */; };
+		3EE18FBF160A7611DB839BB8 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B501A3A6BF4A2B9A8BF48555 /* AppIcon.icns */; };
+		435BC9201B253129A98A86EA /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B6BC0F2A457AB0C4DD6782 /* Defaults.swift */; };
+		46209F99491F7AC74F24C61D /* PhysicsField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391761C45E4075EBE374E522 /* PhysicsField.swift */; };
+		46BD77B881C2F67D35479403 /* WorldRain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9561F1319D604019DC21C09 /* WorldRain.swift */; };
+		56B85129B12B8E1772EF6A39 /* SceneMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF5676EA7CC4A365B9BCEC /* SceneMath.swift */; };
+		67DD4DC2E52A881C40EEC819 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B9BF35903C0E376D473D46 /* ScreenSaver.framework */; };
+		6A68E50F6B6A1CE24AC269AD /* Matrix3DSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F775BC1A0DBAF33A5BB53E /* Matrix3DSaverView.swift */; };
+		8BF7E86F0092B1DFA88E0AD6 /* EarClipTriangulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503CC3A6D8DF541DF6FC06B6 /* EarClipTriangulator.swift */; };
+		8C2353996758DAC1526ED556 /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 110CB32B43F7257EF0C4C4B8 /* teapot.obj */; };
+		95629C1435736CD9B847C7E6 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F15201953F3E16E94CBF19BE /* MetalKit.framework */; };
+		9EEC6467F6B8717D58D4E493 /* MetalDevicePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CC542DD0C39380953DC870 /* MetalDevicePicker.swift */; };
+		A6D9F6A87FF1C5C978A47F8B /* MatrixRain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D336D41CE45444B1949AA8C /* MatrixRain.swift */; };
+		A92678DC42D01B62F7CBC7B4 /* TeapotMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678D994C8145FF49804ABADE /* TeapotMesh.swift */; };
+		AB574A632158D982C8CFE464 /* ralle_logo.obj in Resources */ = {isa = PBXBuildFile; fileRef = 32F196473372F8C83F2BAD5A /* ralle_logo.obj */; };
+		ABF8D7835377082D230A12A4 /* base_color.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDA3077E0D9B0611368F5A94 /* base_color.jpg */; };
+		BC170DB2E1725B6F064E2409 /* MeshAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E846ED737EF5EA9E37E0851 /* MeshAtlas.swift */; };
+		BE7AC19768B735A8AF8A4996 /* GpuRaycaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C1016FB268B0941AFA1B76 /* GpuRaycaster.swift */; };
+		BFB1D9BB5594D4F310272683 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3283689C3A129E42F631635B /* Metal.framework */; };
+		C30ACC1CF06B506650EC12CB /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FD7B4BD15BDA99FE4DD23931 /* Shaders.metal */; };
+		C6C51839DFB3CF0D1E5766D4 /* ConfigureSheetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70AEF90B51D65A8257D11B3 /* ConfigureSheetController.swift */; };
+		C92FB61F02EAC506339A29BC /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CED040F5F9A66C17149379ED /* thumbnail@2x.png */; };
+		D47D2F4B4A1B738E56A96A49 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56497986F3141990DCC9447 /* Cocoa.framework */; };
+		E0C175A2DDDC3DED941DB6BD /* UsdzImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AFF9A53BC75F4CF76E4803 /* UsdzImport.swift */; };
+		F0F3E39D3798362C4BB5C664 /* ModelIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC70558E3186D260DC512BF /* ModelIO.framework */; };
+		F551E7E0FA954C0AB6ED5D29 /* thumbnail.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 53C74DF48AE663CA5DF93D15 /* thumbnail.tiff */; };
+		F9F20D73878C7A0E20B04104 /* AxisGizmoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB34ADC67C0C3240CD98143B /* AxisGizmoView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		110CB32B43F7257EF0C4C4B8 /* teapot.obj */ = {isa = PBXFileReference; path = teapot.obj; sourceTree = "<group>"; };
+		16AFF9A53BC75F4CF76E4803 /* UsdzImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsdzImport.swift; sourceTree = "<group>"; };
+		26950F720777BA747269C4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2A39C6AF0DF95F408E9103FE /* Matrix3DSaverX.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Matrix3DSaverX.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		303DE714284F4E86306FD4FC /* ScreenRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenRegistry.swift; sourceTree = "<group>"; };
+		320D17FEA585F94336A55B56 /* TextMeshGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMeshGenerator.swift; sourceTree = "<group>"; };
+		3283689C3A129E42F631635B /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		32F196473372F8C83F2BAD5A /* ralle_logo.obj */ = {isa = PBXFileReference; path = ralle_logo.obj; sourceTree = "<group>"; };
+		391761C45E4075EBE374E522 /* PhysicsField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsField.swift; sourceTree = "<group>"; };
+		448CBEEF85F165CD726E0948 /* ModelRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRegistry.swift; sourceTree = "<group>"; };
+		503CC3A6D8DF541DF6FC06B6 /* EarClipTriangulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarClipTriangulator.swift; sourceTree = "<group>"; };
+		53C74DF48AE663CA5DF93D15 /* thumbnail.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = thumbnail.tiff; sourceTree = "<group>"; };
+		5A15DED78C28F4781E1124ED /* GlbMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlbMesh.swift; sourceTree = "<group>"; };
+		5E846ED737EF5EA9E37E0851 /* MeshAtlas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshAtlas.swift; sourceTree = "<group>"; };
+		678D994C8145FF49804ABADE /* TeapotMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeapotMesh.swift; sourceTree = "<group>"; };
+		6F94171C23418EC7CD36664F /* spaceship.obj */ = {isa = PBXFileReference; path = spaceship.obj; sourceTree = "<group>"; };
+		74CC542DD0C39380953DC870 /* MetalDevicePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalDevicePicker.swift; sourceTree = "<group>"; };
+		97B93102B75E7788E56EEE89 /* ralle_logo.mtl */ = {isa = PBXFileReference; path = ralle_logo.mtl; sourceTree = "<group>"; };
+		9D336D41CE45444B1949AA8C /* MatrixRain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixRain.swift; sourceTree = "<group>"; };
+		9DC70558E3186D260DC512BF /* ModelIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ModelIO.framework; path = System/Library/Frameworks/ModelIO.framework; sourceTree = SDKROOT; };
+		B501A3A6BF4A2B9A8BF48555 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+		BDA3077E0D9B0611368F5A94 /* base_color.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = base_color.jpg; sourceTree = "<group>"; };
+		C52C035E76C222FD84175E12 /* GlyphAtlas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlyphAtlas.swift; sourceTree = "<group>"; };
+		C56497986F3141990DCC9447 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C9C1016FB268B0941AFA1B76 /* GpuRaycaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GpuRaycaster.swift; sourceTree = "<group>"; };
+		CA58467C7179EA1E01EBEE47 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		CED040F5F9A66C17149379ED /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
+		D0B9BF35903C0E376D473D46 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		E6686EEBDBE021C2F7D537DD /* spaceship.mtl */ = {isa = PBXFileReference; path = spaceship.mtl; sourceTree = "<group>"; };
+		E7F775BC1A0DBAF33A5BB53E /* Matrix3DSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix3DSaverView.swift; sourceTree = "<group>"; };
+		E9561F1319D604019DC21C09 /* WorldRain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldRain.swift; sourceTree = "<group>"; };
+		EB34ADC67C0C3240CD98143B /* AxisGizmoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AxisGizmoView.swift; sourceTree = "<group>"; };
+		EFFF5676EA7CC4A365B9BCEC /* SceneMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneMath.swift; sourceTree = "<group>"; };
+		F15201953F3E16E94CBF19BE /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		F5B85040E4315AD2096D8425 /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		F70AEF90B51D65A8257D11B3 /* ConfigureSheetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureSheetController.swift; sourceTree = "<group>"; };
+		F8B6BC0F2A457AB0C4DD6782 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		FD7B4BD15BDA99FE4DD23931 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9690BD5D8EE6651210978F6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67DD4DC2E52A881C40EEC819 /* ScreenSaver.framework in Frameworks */,
+				BFB1D9BB5594D4F310272683 /* Metal.framework in Frameworks */,
+				95629C1435736CD9B847C7E6 /* MetalKit.framework in Frameworks */,
+				F0F3E39D3798362C4BB5C664 /* ModelIO.framework in Frameworks */,
+				D47D2F4B4A1B738E56A96A49 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24B8D28C7ACB7E13D65382B3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EB34ADC67C0C3240CD98143B /* AxisGizmoView.swift */,
+				F70AEF90B51D65A8257D11B3 /* ConfigureSheetController.swift */,
+				F8B6BC0F2A457AB0C4DD6782 /* Defaults.swift */,
+				503CC3A6D8DF541DF6FC06B6 /* EarClipTriangulator.swift */,
+				5A15DED78C28F4781E1124ED /* GlbMesh.swift */,
+				C52C035E76C222FD84175E12 /* GlyphAtlas.swift */,
+				C9C1016FB268B0941AFA1B76 /* GpuRaycaster.swift */,
+				26950F720777BA747269C4D9 /* Info.plist */,
+				E7F775BC1A0DBAF33A5BB53E /* Matrix3DSaverView.swift */,
+				9D336D41CE45444B1949AA8C /* MatrixRain.swift */,
+				5E846ED737EF5EA9E37E0851 /* MeshAtlas.swift */,
+				74CC542DD0C39380953DC870 /* MetalDevicePicker.swift */,
+				448CBEEF85F165CD726E0948 /* ModelRegistry.swift */,
+				391761C45E4075EBE374E522 /* PhysicsField.swift */,
+				F5B85040E4315AD2096D8425 /* Renderer.swift */,
+				EFFF5676EA7CC4A365B9BCEC /* SceneMath.swift */,
+				303DE714284F4E86306FD4FC /* ScreenRegistry.swift */,
+				678D994C8145FF49804ABADE /* TeapotMesh.swift */,
+				320D17FEA585F94336A55B56 /* TextMeshGenerator.swift */,
+				16AFF9A53BC75F4CF76E4803 /* UsdzImport.swift */,
+				E9561F1319D604019DC21C09 /* WorldRain.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2BA64119CA6DB7405D1E69AE = {
+			isa = PBXGroup;
+			children = (
+				A30640C1B7A5441EF25A8765 /* Resources */,
+				E97C525E600D0DDB7CC8A7E7 /* Shaders */,
+				24B8D28C7ACB7E13D65382B3 /* Sources */,
+				BE38A1277B3319A2E7D94362 /* Frameworks */,
+				6EDD4094B77F6C1ABE2686F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6EDD4094B77F6C1ABE2686F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A39C6AF0DF95F408E9103FE /* Matrix3DSaverX.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A30640C1B7A5441EF25A8765 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B501A3A6BF4A2B9A8BF48555 /* AppIcon.icns */,
+				BDA3077E0D9B0611368F5A94 /* base_color.jpg */,
+				97B93102B75E7788E56EEE89 /* ralle_logo.mtl */,
+				32F196473372F8C83F2BAD5A /* ralle_logo.obj */,
+				E6686EEBDBE021C2F7D537DD /* spaceship.mtl */,
+				6F94171C23418EC7CD36664F /* spaceship.obj */,
+				110CB32B43F7257EF0C4C4B8 /* teapot.obj */,
+				CA58467C7179EA1E01EBEE47 /* thumbnail.png */,
+				53C74DF48AE663CA5DF93D15 /* thumbnail.tiff */,
+				CED040F5F9A66C17149379ED /* thumbnail@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BE38A1277B3319A2E7D94362 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C56497986F3141990DCC9447 /* Cocoa.framework */,
+				3283689C3A129E42F631635B /* Metal.framework */,
+				F15201953F3E16E94CBF19BE /* MetalKit.framework */,
+				9DC70558E3186D260DC512BF /* ModelIO.framework */,
+				D0B9BF35903C0E376D473D46 /* ScreenSaver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E97C525E600D0DDB7CC8A7E7 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				FD7B4BD15BDA99FE4DD23931 /* Shaders.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6002636F8E02BD660287BA2F /* Matrix3DSaverX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BAFBA87680F53A55B7241DE /* Build configuration list for PBXNativeTarget "Matrix3DSaverX" */;
+			buildPhases = (
+				96EA000622141026F52C728C /* Sources */,
+				4C217792E160EA38943E3D8D /* Resources */,
+				9690BD5D8EE6651210978F6D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Matrix3DSaverX;
+			packageProductDependencies = (
+			);
+			productName = Matrix3DSaverX;
+			productReference = 2A39C6AF0DF95F408E9103FE /* Matrix3DSaverX.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15AC21C8B0E10DF88558B9B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					6002636F8E02BD660287BA2F = {
+						DevelopmentTeam = YOUR_TEAM_ID;
+					};
+				};
+			};
+			buildConfigurationList = 84427BA47F9E382E1D647F9E /* Build configuration list for PBXProject "Matrix3DSaverX" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2BA64119CA6DB7405D1E69AE;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6EDD4094B77F6C1ABE2686F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6002636F8E02BD660287BA2F /* Matrix3DSaverX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C217792E160EA38943E3D8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EE18FBF160A7611DB839BB8 /* AppIcon.icns in Resources */,
+				ABF8D7835377082D230A12A4 /* base_color.jpg in Resources */,
+				1C3C6140FC3DDB6828F0A4B4 /* ralle_logo.mtl in Resources */,
+				AB574A632158D982C8CFE464 /* ralle_logo.obj in Resources */,
+				2AE7ED00B0101B0172D73CCD /* spaceship.mtl in Resources */,
+				2FBCEA487A2A29A9FD5CD1A3 /* spaceship.obj in Resources */,
+				8C2353996758DAC1526ED556 /* teapot.obj in Resources */,
+				2E83E24DE9C91CA1320C0659 /* thumbnail.png in Resources */,
+				F551E7E0FA954C0AB6ED5D29 /* thumbnail.tiff in Resources */,
+				C92FB61F02EAC506339A29BC /* thumbnail@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96EA000622141026F52C728C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F20D73878C7A0E20B04104 /* AxisGizmoView.swift in Sources */,
+				C6C51839DFB3CF0D1E5766D4 /* ConfigureSheetController.swift in Sources */,
+				435BC9201B253129A98A86EA /* Defaults.swift in Sources */,
+				8BF7E86F0092B1DFA88E0AD6 /* EarClipTriangulator.swift in Sources */,
+				3613A4350D3ECA876810FC77 /* GlbMesh.swift in Sources */,
+				26EB1E66AA87623050141E8F /* GlyphAtlas.swift in Sources */,
+				BE7AC19768B735A8AF8A4996 /* GpuRaycaster.swift in Sources */,
+				6A68E50F6B6A1CE24AC269AD /* Matrix3DSaverView.swift in Sources */,
+				A6D9F6A87FF1C5C978A47F8B /* MatrixRain.swift in Sources */,
+				BC170DB2E1725B6F064E2409 /* MeshAtlas.swift in Sources */,
+				9EEC6467F6B8717D58D4E493 /* MetalDevicePicker.swift in Sources */,
+				36E9421667270891A4445283 /* ModelRegistry.swift in Sources */,
+				46209F99491F7AC74F24C61D /* PhysicsField.swift in Sources */,
+				20579ECEDB1382772C22EE54 /* Renderer.swift in Sources */,
+				56B85129B12B8E1772EF6A39 /* SceneMath.swift in Sources */,
+				3D3093E73DF1589645C9F620 /* ScreenRegistry.swift in Sources */,
+				C30ACC1CF06B506650EC12CB /* Shaders.metal in Sources */,
+				A92678DC42D01B62F7CBC7B4 /* TeapotMesh.swift in Sources */,
+				1F06F5E2BEF3C861455572A7 /* TextMeshGenerator.swift in Sources */,
+				E0C175A2DDDC3DED941DB6BD /* UsdzImport.swift in Sources */,
+				46BD77B881C2F67D35479403 /* WorldRain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4372B604702095220F0EC9A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = NO;
+				CURRENT_PROJECT_VERSION = 30;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.r8lle.screensaver.matrix3dx;
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+		46C07C8AB794DA68FB42EB92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YOUR_TEAM_ID;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7459065FC08AE467AE02A13E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YOUR_TEAM_ID;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		955629A2AEDABD8974255C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = NO;
+				CURRENT_PROJECT_VERSION = 30;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.r8lle.screensaver.matrix3dx;
+				SDKROOT = macosx;
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84427BA47F9E382E1D647F9E /* Build configuration list for PBXProject "Matrix3DSaverX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46C07C8AB794DA68FB42EB92 /* Debug */,
+				7459065FC08AE467AE02A13E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9BAFBA87680F53A55B7241DE /* Build configuration list for PBXNativeTarget "Matrix3DSaverX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				955629A2AEDABD8974255C1B /* Debug */,
+				4372B604702095220F0EC9A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15AC21C8B0E10DF88558B9B1 /* Project object */;
+}

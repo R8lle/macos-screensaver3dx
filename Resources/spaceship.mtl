@@ -1,0 +1,6 @@
+# Spaceship-Material (Texturen in textures/)
+
+newmtl Material_003
+	map_Kd base_color.jpg
+	Kd 0.18 0.18 0.18
+	Ks 0

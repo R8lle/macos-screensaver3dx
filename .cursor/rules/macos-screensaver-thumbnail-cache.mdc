@@ -1,0 +1,45 @@
+---
+description: macOS .saver Auswahlbild, Staple und Wallpaper-Cache (alle Screensaver-Projekte)
+alwaysApply: true
+---
+
+# macOS Screensaver: Auswahlbild & Cache
+
+Gilt für alle macOS-`.saver`-Projekte (Fractal, Matrix 3D/X, …).
+
+## Auswahlbild (nicht Preview)
+
+Das Raster-Bild in Systemeinstellungen → Bildschirmschoner kommt von:
+
+- `ScreenSaverThumbnail` = `thumbnail` in `Info.plist`
+- `Resources/thumbnail.png` (90×58), `thumbnail@2x.png` (180×116, **DPI 144**), Multi-Rep `thumbnail.tiff`
+
+Das ist **nicht** die Live-`isPreview`-Ansicht.
+
+## Signing / Staple
+
+- Local Release: Developer ID + Timestamp.
+- **Nicht** `stapler staple` auf `.saver` anwenden. Das Ticket landet als `Contents/CodeResources` und kann das Auswahlbild zerstören (Fallback: blauer Default-Wirbel).
+- Notarisierung ohne Staple ist ok. Vor/nach Install `Contents/CodeResources` entfernen, falls vorhanden.
+
+## Cache-Purge (Pflicht nach Thumbnail-/Install-Änderungen)
+
+Nach fehlgeschlagenem erstem Load schreibt Wallpaper den Assets.car-**Default** (blauer Wirbel) und behält ihn. Bundle-Fixes allein reichen nicht.
+
+Beim Install / nach Thumbnail-Änderungen immer:
+
+```bash
+CACHE="$(getconf DARWIN_USER_CACHE_DIR)"
+rm -rf "$CACHE/com.apple.wallpaper.extension.legacy/com.apple.wallpaper.legacy.thumbnails"
+rm -f  "$CACHE/com.apple.wallpaper.agent/com.apple.wallpaper.view-model-cache/extension-com.apple.wallpaper.extension.legacy-screenSaver"
+rm -rf "$HOME/Library/Containers/com.apple.wallpaper.agent/Data/Library/Caches/com.apple.wallpaper.caches/screenSaver-/Users/$USER/Library/Screen Savers/"*.saver
+killall WallpaperAgent 2>/dev/null || true
+```
+
+In Install-Skripten (`tools/build.sh` / `tools/release.sh`) denselben Purge einbauen.
+
+## Diagnose
+
+- `ScreenSaverModule.thumbnail` liefert 90×58 → Bundle ok.
+- Cache-PNG ~214×130 Cyan-Wirbel → vergifteter Default, Purge nötig.
+- Cache-PNG ~180×116 Custom → Auswahlbild ok.
